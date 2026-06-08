@@ -28,8 +28,8 @@ function calculaTempo(tempoObjetivo){
   let tempoFinal = tempoObjetivo - tempoAtual;
   let segundos = Math.floor(tempoFinal / 1000);
   let minutos = Math.floor(segundos / 60);
-    let horas = Math.floor(minutos / 60);
-    let dias = Math.floor(horas / 24);
+  let horas = Math.floor(minutos / 60);
+  let dias = Math.floor(horas / 24);
     
     segundos %= 60;
     minutos %= 60;
@@ -42,10 +42,10 @@ function calculaTempo(tempoObjetivo){
     }
     function atualizaCronometro(){
       for (let i=0; i<contadores.length;i++){
-        document.getElementById("dias"1).textContent = calculaTempo(tempos[1])[0];
-        document.getElementById("horas"+1).textContent = calculaTempo(tempos[1])[1];
-        document.getElementById("min"+1).textContent = calculaTempo(tempos[1])[2];
-        document.getElementById("seg"+1).textContent = calculaTempo(tempos[1])[3];
+        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
+        document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
+        document.getElementById("min"+i).textContent = calculaTempo(tempos[i])[2];
+        document.getElementById("seg"+i).textContent = calculaTempo(tempos[i])[3];
       }
     }
     function comecaCronometro(){
